@@ -3,7 +3,7 @@ import './statistics.styled.css';
 
 export default function Statistics({ title, stats }) {
   return (
-    <section class="statistics">
+    <section className="statistics">
       {title && <h2 className="title">{title}</h2>}
 
       <ul className="stat-list">

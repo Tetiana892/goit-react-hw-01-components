@@ -4,7 +4,7 @@ import './friendlist.styled.css';
 
 export default function FriendList({ friends }) {
   return (
-    <ul class="friend-list">
+    <ul className="friend-list">
       {friends.map(({ id, name, isOnline, avatar }) => (
         <FriendListItem
           key={id}
