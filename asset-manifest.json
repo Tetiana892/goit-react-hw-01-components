@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Tetiana892/goit-react-hw-01-components/static/css/main.7acaea2f.css",
-    "main.js": "/Tetiana892/goit-react-hw-01-components/static/js/main.8d8902e8.js",
-    "index.html": "/Tetiana892/goit-react-hw-01-components/index.html",
-    "main.7acaea2f.css.map": "/Tetiana892/goit-react-hw-01-components/static/css/main.7acaea2f.css.map",
-    "main.8d8902e8.js.map": "/Tetiana892/goit-react-hw-01-components/static/js/main.8d8902e8.js.map"
+    "main.css": "/goit-react-hw-01-components/static/css/main.7acaea2f.css",
+    "main.js": "/goit-react-hw-01-components/static/js/main.8d8902e8.js",
+    "index.html": "/goit-react-hw-01-components/index.html",
+    "main.7acaea2f.css.map": "/goit-react-hw-01-components/static/css/main.7acaea2f.css.map",
+    "main.8d8902e8.js.map": "/goit-react-hw-01-components/static/js/main.8d8902e8.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
