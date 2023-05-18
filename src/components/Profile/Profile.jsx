@@ -1,31 +1,41 @@
 import PropTypes from 'prop-types';
-import './profile.styled.css';
+import {
+  ContainerProfile,
+  Description,
+  Avatar,
+  Name,
+  TextInfo,
+  ContainerStats,
+  ListStats,
+  SpanLabel,
+  SpanQuantity,
+} from './profile.styled.js';
 
 export default function Profile({ username, tag, location, avatar, stats }) {
   return (
-    <div className="profile">
-      <div className="description">
-        <img src={avatar} alt="User avatar" className="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">{tag}</p>
-        <p className="location">{location}</p>
-      </div>
+    <ContainerProfile>
+      <Description>
+        <Avatar src={avatar} alt={username} />
+        <Name>{username}</Name>
+        <TextInfo>@{tag}</TextInfo>
+        <TextInfo>{location}</TextInfo>
+      </Description>
 
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{stats.followers}</span>
-        </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{stats.views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{stats.likes}</span>
-        </li>
-      </ul>
-    </div>
+      <ContainerStats>
+        <ListStats>
+          <SpanLabel>Followers</SpanLabel>
+          <SpanQuantity>{stats.followers}</SpanQuantity>
+        </ListStats>
+        <ListStats>
+          <SpanLabel>Views</SpanLabel>
+          <SpanQuantity>{stats.views}</SpanQuantity>
+        </ListStats>
+        <ListStats>
+          <SpanLabel>Likes</SpanLabel>
+          <SpanQuantity>{stats.likes}</SpanQuantity>
+        </ListStats>
+      </ContainerStats>
+    </ContainerProfile>
   );
 }
 Profile.propTypes = {

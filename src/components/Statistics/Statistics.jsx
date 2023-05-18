@@ -1,20 +1,28 @@
 import PropTypes from 'prop-types';
-import './statistics.styled.css';
+import { getRandomColor } from './getRandomColor.js';
+import {
+  StatisticsName,
+  Title,
+  StatList,
+  ItemStat,
+  StatLabel,
+  StatPercentage,
+} from './statistics.styled.js';
 
 export default function Statistics({ title, stats }) {
   return (
-    <section className="statistics">
-      {title && <h2 className="title">{title}</h2>}
+    <StatisticsName>
+      {title && <Title>{title}</Title>}
 
-      <ul className="stat-list">
+      <StatList>
         {stats.map(stat => (
-          <li key={stat.id} className="item">
-            <span className="label">{stat.label}</span>
-            <span className="percentage">{stat.percentage}%</span>
-          </li>
+          <ItemStat key={stat.id} style={{ backgroundColor: getRandomColor() }}>
+            <StatLabel>{stat.label}</StatLabel>
+            <StatPercentage>{stat.percentage}%</StatPercentage>
+          </ItemStat>
         ))}
-      </ul>
-    </section>
+      </StatList>
+    </StatisticsName>
   );
 }
 Statistics.propTypes = {

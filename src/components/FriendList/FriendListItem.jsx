@@ -1,12 +1,18 @@
 import PropTypes from 'prop-types';
+import {
+  CartFriend,
+  FriendName,
+  StatusFriend,
+  AvatarName,
+} from './friendlist.styled';
 
 export default function FriendListItem({ avatar, name, isOnline }) {
   return (
-    <li className="item">
-      <span className={`status ${isOnline ? 'online' : 'offline'}`}></span>
-      <img className="avatar" src={avatar} alt="User avatar" width="48" />
-      <p className="name">{name}</p>
-    </li>
+    <CartFriend>
+      <StatusFriend statusType={isOnline}></StatusFriend>
+      <AvatarName src={avatar} alt={name} width="48" />
+      <FriendName>{name}</FriendName>
+    </CartFriend>
   );
 }
 FriendListItem.propTypes = {

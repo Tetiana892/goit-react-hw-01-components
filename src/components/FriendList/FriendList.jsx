@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import FriendListItem from './FriendListItem';
-import './friendlist.styled.css';
+import { ItemFriend } from './friendlist.styled.js';
 
 export default function FriendList({ friends }) {
   return (
-    <ul className="friend-list">
+    <ItemFriend>
       {friends.map(({ id, name, isOnline, avatar }) => (
         <FriendListItem
           key={id}
@@ -13,7 +13,7 @@ export default function FriendList({ friends }) {
           isOnline={isOnline}
         />
       ))}
-    </ul>
+    </ItemFriend>
   );
 }
 FriendList.protoTypes = {
